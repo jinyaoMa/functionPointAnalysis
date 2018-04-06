@@ -296,8 +296,16 @@ measurement parameters will be available.</p>
 </p>
 </form>
 
-
-
+<!-- Commit 20180406 5pm -->
+<script>
+document.mainForm.Result.disabled = false;
+</script>
+<script src="language_prod.js"></script>
+<script src="calculateLOC.js"></script>
+<script>
+setLOCCalculator(document.body, document.mainForm.Result);
+</script>
+<!-- End Commit 20180406 5pm -->
 
 
 </body></html>
