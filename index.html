@@ -303,9 +303,21 @@ document.mainForm.Result.disabled = false;
 <script src="language_prod.js"></script>
 <script src="calculateLOC.js"></script>
 <script>
-setLOCCalculator(document.body, document.mainForm.Result);
+var locResultNode = setLOCCalculator(document.body, document.mainForm.Result); // Commit 20180406 8pm
 </script>
 <!-- End Commit 20180406 5pm -->
+
+<!-- Commit 20180406 8pm -->
+<script src="helperFunctions.js"></script>
+<script src="calculateEffortBasedOnLanguage.js"></script>
+<script src="calculateEffortAndTimeBasedOnProjectComplexity.js"></script>
+<script src="calculateCost.js"></script>
+<script>
+var SimpleEffortResultNode = setEffortCalculatorBasedOnLanguage(document.body, document.mainForm.Result);
+var effortAndTimeResultsNodes = setEffortAndTimeCalculatorBasedOnProjectComplexity(document.body, locResultNode);
+var costResultNode = setCostCalculator(document.body, effortAndTimeResultsNodes.effort);
+</script>
+<!-- End Commit 20180406 8pm -->
 
 
 </body></html>

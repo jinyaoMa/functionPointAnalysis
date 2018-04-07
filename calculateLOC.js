@@ -1,4 +1,4 @@
-function setLanguageSelector(parentNode, fpNode) {
+function setLOCCalculator(parentNode, fpNode) {
 	var formCalculateLOC = document.createElement("form");
 	formCalculateLOC.style.maxWidth = "500px";
 	formCalculateLOC.style.lineHeight = "2em";
@@ -45,8 +45,12 @@ function setLanguageSelector(parentNode, fpNode) {
 		var fpValue = fpNode.value.split(" FP")[0];
 		var languageValue = document.getElementById(selectLanguage.id).value;
 		if (!isNaN(fpValue) && fpValue.trim() != "") {
-			result.value = (parseInt(fpValue) * parseInt(languageValue)) + " LOC";
+			result.value = (Number(fpValue) * Number(languageValue)) + " LOC";
+		} else {
+			alert("FP required.");
 		}
 		event.preventDefault();
 	};
+	
+	return result;
 }
