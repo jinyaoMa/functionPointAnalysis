@@ -326,4 +326,30 @@ var seedingPanel = setButtonSeeding14Factors(document.body, document.mainForm.F1
 </script>
 <!-- End Commit 20180407 3pm -->
 
+<!-- Add Language Suggestion -->
+<script src="languageSuggestion.js"></script>
+<script>
+var optionLanguageSelected = document.getElementsByTagName("form")[1].getElementsByTagName("select")[0].options;
+setLanguageSuggestion(document.body, optionLanguageSelected,
+	effortAndTimeResultsNodes.time.id, document.getElementsByTagName("form")[3].getElementsByTagName("select")[0].value);
+</script>
+<!-- End Add Language Suggestion -->
+
+<!-- Add Refresch -->
+<script>
+var srgasgazsrgasrdfvgzdfb = document.createElement("input");
+srgasgazsrgasrdfvgzdfb.type = "button";
+srgasgazsrgasrdfvgzdfb.value = "Refresh";
+srgasgazsrgasrdfvgzdfb.onclick = function () { window.open("index.html", "_self") };
+document.body.appendChild(srgasgazsrgasrdfvgzdfb);
+var iukjyhergegjhf = document.createElement("input");
+iukjyhergegjhf.type = "button";
+iukjyhergegjhf.value = "Go to bottom";
+iukjyhergegjhf.onclick = function () { window.scrollBy(0, document.body.scrollHeight) };
+seedingPanel.innerHTML += "<br>";
+seedingPanel.innerHTML += "<br>";
+seedingPanel.appendChild(iukjyhergegjhf);
+</script>
+<!-- End Refresch -->
+
 </body></html>
