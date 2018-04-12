@@ -13,6 +13,7 @@ function setLanguageSuggestion(parentNode, language, time_id, selectedMode) {
 	var labelResult = document.createElement("label");
 	labelResult.innerHTML = "Old Time: ";
 	var result = document.createElement("input");
+	result.id = Math.random();
 	result.disabled = "true";
 	result.size = "10";
 	result.style.fontWeight = "bold";
@@ -67,7 +68,9 @@ function setLanguageSuggestion(parentNode, language, time_id, selectedMode) {
 						document.getElementById(selectLanguage.id).appendChild(optionLanguage);
 				}
 			}
-			result.value = (result.value != document.getElementById(time_id).value) ? document.getElementById(time_id).value : result.value;
+			if (document.getElementById(result.id).value != document.getElementById(time_id).value) {
+				document.getElementById(result.id).value = document.getElementById(time_id).value;
+			}
 		} else {
 			alert("Effort and Time required.");
 		}
